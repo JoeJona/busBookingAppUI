@@ -1,0 +1,402 @@
+/* SHOWCASE */
+#showcase {
+    background:
+        url('https://d3aux7tjp119y2.cloudfront.net/original_images/Tak2-CMSTemplate_IrMZHla.jpg') no-repeat center center;
+    border-bottom: 1px solid #56a79a;
+    margin-bottom: 58px;
+}
+
+#showcase .row {
+    height: 600px;
+}
+
+#showcase h1 {
+    font-size: 50px;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+#showcase p {
+    color: #333;
+    margin: 0;
+    font-size: 17px;
+}
+
+#showcase .showcase-content {
+    background: #E6E6E6;
+    color: #333;
+    border-radius: 90px;
+    padding: 40px;
+    opacity: 1;
+    width: 50%;
+    height: 30%;
+    top: 200px;
+    left: 200px;
+}
+
+#showcase .img {
+    width: 1920px;
+    height: 1275px;
+}
+
+/* FEATURES */
+#features h2 {
+    font-size: 35px;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+#features p {
+    color: #888;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+#features .fa {
+    font-size: 60px;
+    /*color:#56a79a;*/
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* PARTNERS */
+.containers {
+    width: 90%;
+    margin: 0px auto;
+}
+
+.partners img {
+    transition: all .3s ease;
+}
+
+.partners img:hover {
+    box-shadow: 0 0 10px 1px #dbdbdb;
+}
+
+::ng-deep .customizeMenu {
+    width: 260px;
+    margin-top: 10px;
+    margin-left: -38px;
+}
+
+/*---------------------
+  Helper CSS
+-----------------------*/
+
+.section-title {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.section-title h2 {
+    color: #1c1c1c;
+    font-weight: 700;
+    position: relative;
+    font-size: 30px;
+}
+
+.section-title h2:after {
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    right: 0;
+    height: 4px;
+    width: 80px;
+    background: #000;
+    content: "";
+    margin: 0 auto;
+}
+
+/* agents */
+.row.heading h2 {
+    position: relative;
+    color: #fff;
+    font-size: 52.52px;
+    /* line-height: 95px; */
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0 75px;
+    padding-bottom: 20px;
+}
+.row.heading  h2:after {
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    right: 0;
+    height: 4px;
+    width: 80px;
+    background: #fff;
+    content: "";
+    margin: 0 auto;
+}
+
+.row.heading h4 {
+    color: #fff;
+    /* font-size: 32.52px;
+    line-height: 55px; */
+    font-weight: 200;
+    text-align: center;
+    /* margin: 0 0 40px; */
+    /* padding-bottom: 20px; */
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.heading.heading-icon {
+    display: block;
+}
+
+.padding-lg {
+    display: block;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.practice-area.padding-lg {
+    padding-bottom: 55px;
+    padding-top: 55px;
+}
+
+.practice-area .inner {
+    border: 1px solid #999999;
+    text-align: center;
+    margin-bottom: 28px;
+    padding: 40px 25px;
+}
+
+.our-agents .cnt-block:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border: 0;
+}
+
+.practice-area .inner h3 {
+    color: #3c3c3c;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 0;
+}
+
+.practice-area .inner p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.practice-area .inner img {
+    display: inline-block;
+}
+
+
+.our-agents {
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTu1uEvTrdHHmigvZVQm3ojGnRsmhPpWKdsagl3q9z&s") no-repeat center top / cover;
+
+}
+
+.our-agents .cnt-block {
+    float: left;
+    width: 100%;
+    background: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    border: 2px solid #d5d5d5;
+    margin: 0 0 28px;
+    border-radius: 5px;
+}
+
+.our-agents .cnt-block figure {
+    width: 148px;
+    height: 148px;
+    border-radius: 100%;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.our-agents .cnt-block img {
+    width: 148px;
+    height: 148px;
+    border-radius: 100%;
+}
+
+.our-agents .cnt-block h3 {
+    color: #2a2a2a;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 6px 0;
+    text-transform: uppercase;
+}
+
+.our-agents .cnt-block h3 a {
+    text-decoration: none;
+    color: #2a2a2a;
+}
+
+.our-agents .cnt-block h3 a:hover {
+    color: #337ab7;
+}
+
+.our-agents .cnt-block p {
+    color: #2a2a2a;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.our-agents .cnt-block .follow-us {
+    margin: 20px 0 0;
+}
+
+.our-agents .cnt-block .follow-us li {
+    display: inline-block;
+    width: auto;
+    margin: 0 5px;
+}
+
+.our-agents .cnt-block .follow-us li .fa {
+    font-size: 24px;
+    color: #767676;
+}
+
+.our-agents .cnt-block .follow-us li .fa:hover {
+    color: #025a8e;
+}
+
+/* property */
+body {
+    background: #F5F1EE;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card {
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.card-img-top {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+span.text-muted {
+    font-size: 12px;
+}
+
+small.text-muted {
+    font-size: 8px;
+}
+
+h5.mb-0 {
+    font-size: 1rem;
+}
+
+small.ghj {
+    font-size: 9px;
+}
+
+.mid {
+    background: #ECEDF1;
+}
+
+h6.ml-1 {
+    font-size: 13px;
+}
+
+small.key {
+    text-decoration: underline;
+    font-size: 9px;
+    cursor: pointer;
+}
+
+.btn-danger {
+    color: #FFCBD2;
+}
+
+.btn-danger:focus {
+    box-shadow: none;
+}
+
+small.justify-content-center {
+    font-size: 9px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media screen and (max-width:600px) {
+    .col-sm-4 {
+        margin-bottom: 50px;
+    }
+}
+
+.badge {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 99;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px
+        /* color: #fff; */
+}
+
+.wish-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 99;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+}
+
+.compare-icon {
+    position: absolute;
+    right: 35px;
+    top: 10px;
+    z-index: 99;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+}
+
+.wish-icon .fa-heart {
+    color: #ff6161;
+}
+
+.img-box {
+    height: 120px;
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.addr {
+    font-size: small;
+    margin-top: -15px;
+    color: #1F79B8;
+}
+
+.addr:hover {
+    text-decoration: underline;
+}
+
+.btn-dark-b {
+    color: #fff;
+    background-color: #212529;
+}
+
+.btn-dark-b:hover {
+    opacity: 0.9;
+}
+
+.green-color {
+    color: #56A79A;
+}

@@ -1,0 +1,101 @@
+<!-- Header Section Begin -->
+<header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <div class="header__top__left">
+            <ul>
+              <li><i class="fa fa-envelope"></i><a href="mailto:support@esooradelivery.com"
+                  style="color:#000">support@esooradelivery.com</a></li>
+              <li><i class="fa fa-phone"></i> <a href="tel:+251911..." style="color:#000">+251911...</a> </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="header__top__right">
+            <div class="header__top__right__social">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-telegram"></i></a>
+            </div>
+            <div class="header__top__right__language">
+              <img src="assets/img/ethio-us-flag.png" width="30" alt="">
+              <div>English</div>
+              <span class="arrow_carrot-down"></span>
+              <ul>
+                <li><a href="#">Amharic</a></li>
+                <li><a href="#">English</a></li>
+              </ul>
+            </div>
+            <div class="header__top__right__auth" *ngIf="authUser==null">
+              <a href="./signin"><i class="fa fa-user"></i> Login</a>
+            </div>
+            <div class="header__top__right__auth" *ngIf="authUser!=null">
+              <button mat-icon-button [matMenuTriggerFor]="menu">
+                <span><i class="fa fa-user-circle"></i>&nbsp;{{ authUser.firstName }} {{authUser.lastName}}</span>
+                <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu" class="customizeMenu">
+                <button mat-menu-item (click)="dashboardPage()">
+                  <mat-icon>dashboard</mat-icon>
+                  <span>Dashboard</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>account_circle</mat-icon>
+                  <span>My Profile</span>
+                </button>
+                <button (click)="logout()" mat-menu-item>
+                  <mat-icon>logout</mat-icon>
+                  <span>Logout</span>
+                </button>
+              </mat-menu>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="header__logo">
+          <!-- <a href="./home"><img src="assets/img/betdelala_logo.png" alt=""></a> -->
+          <a href="./home" style="text-decoration: none;" ><img class="img_logo" src="assets/img/esoora_logo.png" alt=""></a>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <nav class="header__menu">
+          <ul>
+            <li class=""><a href="./home">Home</a></li>
+            <li><a href="./property">Property</a></li>
+            <li><a href="./contact">Contact</a></li>
+            <li><a href="./aboutus">About</a></li>
+            <li><a href="#">Pages</a>
+              <ul class="header__menu__dropdown">
+                <li><a href="./shop-detail">Property Details</a></li>
+                <li><a href="./blog">Blog</a></li>
+                <li><a href="./agents">Agents</a></li>
+                <li><a href="./agencies">Agencies</a></li>
+              </ul>
+            </li>
+            <!-- <li *ngIf="authUser!=null"><a href="./admin-dashboard">Admin Dashboard</a></li> -->
+            <!-- <li *ngIf="userRole == 'ADMIN'"><a href="./admin-dashboard">Admin Dashboard</a></li> -->
+          </ul>
+        </nav>
+      </div>
+      <div class="col-lg-2">
+        <div class="header__cart">
+          <ul>
+            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+          </ul>
+          <div class="header__cart__post"><button class="btn btn-dark">Post</button></div>
+        </div>
+      </div>
+    </div>
+    <div class="humberger__open">
+      <i class="fa fa-bars"></i>
+    </div>
+  </div>
+</header>
+<!-- Header Section End -->

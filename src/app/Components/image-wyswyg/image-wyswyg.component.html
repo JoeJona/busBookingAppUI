@@ -1,0 +1,85 @@
+<div mat-dialog-content>
+    <form [formGroup]="postForms" (ngSubmit)="SaveData()">
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input type="text" matInput formControlName="name" placeholder="Placeholder">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input type="email" matInput formControlName="email" placeholder="Placeholder">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Phone number</mat-label>
+            <input type="text" matInput formControlName="phone" placeholder="Placeholder">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Post Title</mat-label>
+            <input type="text" matInput formControlName="title" placeholder="Placeholder">
+        </mat-form-field>
+        <div>
+            <app-upload-form (onSingleImageUploaded)="singleUploadImage($event)"></app-upload-form>
+        </div>
+        
+        <!-- <uploader></uploader>  -->
+        <hr>
+        <div class="editor">
+            <editor formControlName="content" [init]="{
+            base_url: '/tinymce', 
+            suffix: '.min',
+             height: 300,
+        
+             plugins: [
+        
+                'autolink',
+        
+               'lists','link','image','charmap','preview','anchor','searchreplace','visualblocks',
+        
+               'fullscreen','insertdatetime','media','table','help','wordcount'
+        
+             ],
+        
+             toolbar:
+        
+              'undo redo | casechange blocks | bold italic backcolor | \
+        
+              alignleft aligncenter alignright alignjustify | \
+        
+              bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+        
+           }" initialValue="Welcome to TinyMCE Angular"></editor>
+        </div>
+        <div class="submit">
+            <button type="submit" style="margin-left: 8px;" mat-raised-button color="primary">Submit</button>
+        </div>
+
+    </form>
+    
+</div>
+<hr>
+<div>
+    <div class="container">
+        <h4>Table to show data for firebase</h4>
+        <table class="table">
+            <thead class="table">
+                <th>Name</th>
+                <th>Email</th>
+                <th>phone</th>
+                <th class="col-md-4">Title</th>
+                <th class="col-md-4">Content</th>
+                <th class="col-md-4">Image</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let post of Posts">
+                    <td>{{post.name}}</td>
+                    <td>{{post.email}}</td>
+                    <td>{{post.phone}}</td>
+                    <td>
+                        {{post.title}}
+                    </td>
+                    <td [innerHtml]="post.content" ></td>
+                    <td>{{post.imageSource}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

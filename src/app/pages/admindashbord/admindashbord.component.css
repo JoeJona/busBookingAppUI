@@ -1,0 +1,22 @@
+.full-width-table{
+    width: 100%;
+}
+
+#home-left{
+}
+
+#home-right{
+    margin-top: 20px;
+}
+
+.page-content{
+    /* border: 10px solid black; */
+    /* height: 20%; */
+}
+
+th {
+    text-align: center;
+    background: #000;
+    color: #fff;
+    width: 5px;
+}

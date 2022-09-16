@@ -1,0 +1,16 @@
+mat-form-field{
+    width: 40%;
+    margin: 10px;
+}
+.submit{
+    padding-top: 20px;
+}
+table{
+    border: 2px solid red;
+}
+th{
+    border: 2px dotted green;
+}
+td{
+    border: 5px dashed  blue;
+}

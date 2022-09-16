@@ -1,0 +1,46 @@
+<div class="home-container" style="margin: 20px">
+  <div id="home-left">
+    <!-- <app-sidemenu></app-sidemenu> -->
+  </div>
+  <div id="home-right">
+    <section class="home-section">
+      <div class="page-content">
+        <div class="container">
+          <div class="container-fluid">
+            <!-- <input
+              type="search"
+              class="form-control"
+              style="width: 50%; margin: 10px auto"
+              placeholder="Search"
+            /> -->
+            <mat-card class="example-card">
+              <mat-card-header>
+                <!-- <div mat-card-avatar class="example-header-image"></div> -->
+                <mat-card-title>{{ restaurant.name }}</mat-card-title>
+                <mat-card-subtitle>{{ restaurant.tag }}</mat-card-subtitle>
+              </mat-card-header>
+              <!-- <div *ngFor="let img of restaurant.restaurantImageEntities"> -->
+              <img
+                mat-card-image
+                [src]="restaurant.restaurantImageEntities[0].url"
+                alt="Photo of a Shiba Inu"
+              />
+              <!-- </div> -->
+              <mat-card-content>
+                <div class="desc">
+                  <h3>{{ restaurant.phoneNumber }}</h3>
+                  <h4>rate - {{ restaurant.rate }}</h4>
+                </div>
+                <p>{{ restaurant.description }}</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

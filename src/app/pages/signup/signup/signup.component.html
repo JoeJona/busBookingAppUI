@@ -1,0 +1,152 @@
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                <div class="wrap d-md-flex">
+
+                    <div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center" style="">
+                        <div class="text" style=" width: 800px;">
+                            <img src="assets/img/signup-img.png" width="250" alt="logo" />
+                        </div>
+                    </div>
+
+                    <div class="signup-wrap p-4 p-lg-5">
+                        <div id="error-msg-box" class="alert alert-danger alert-dismissible fade show " role="alert"
+                            *ngIf="alertModel&&alertModel.isShow && alertModel.alertType=='Fail'">
+                            <h4 class="alert-heading">{{alertModel.alertMessege}}</h4>
+                            <p>{{alertModel.alertDetailMessege}}</p>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"
+                                (click)="alertModel.isShow=false">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="row justify-content-center">
+                            <img src="assets/img/betdelala_logo.png" width="150" alt="Logo" />
+                        </div>
+                        <hr />
+                        <div class="d-flex">
+                            <div class="w-100">
+                                <h3 class="mb-4 text-center" style="font-family: robot;">Create an Account</h3>
+                            </div>
+                        </div>
+                        <form #f="ngForm" (ngSubmit)="onFormSubmit(f)" class="signin-form row">
+                            <div class="form-group mb-3 col-lg-12">
+                                <label for="firstName" class="label">First Name:</label>
+                                <input type="text" class="form-control" [(ngModel)]="userModel.firstName"
+                                    placeholder="First Name" id="firstName" ngModel name="firstName" firstName required
+                                    #userFirstNamecomponent="ngModel" required="required" />
+                                <mat-error
+                                    *ngIf="userFirstNamecomponent.touched && userFirstNamecomponent.invalid && !userFirstNamecomponent.hasError('required')">
+                                    Please enter valid name.Only characters allowed.
+                                </mat-error>
+                                <mat-error
+                                    *ngIf="userFirstNamecomponent.touched && userFirstNamecomponent.hasError('required')">
+                                    First name is <strong>required</strong>
+                                </mat-error>
+                            </div>
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function () {
+                                    document.getElementById('firstName').onchange = function () {
+                                        let str = document.getElementById('firstName').value;
+                                        let firstWord = str.toString().split(' ')[0];
+                                        // alert(firstWord);
+                                        document.getElementById("lastName").value = firstWord + Math.floor(Math.random() * (999 - 100 + 1) + 100);
+                                    }
+                                });
+                            </script>
+
+                            <div class="form-group mb-3 col-lg-12">
+                                <label for="lastName" class="label">Last Name:</label>
+                                <input type="text" class="form-control" name="lastName" placeholder="Last Name"
+                                    id="lastName" [(ngModel)]="userModel.lastName" required
+                                    #userLastNamecomponent="ngModel" required="required" />
+                                <mat-error
+                                    *ngIf="userLastNamecomponent.touched && userLastNamecomponent.invalid && !userLastNamecomponent.hasError('required')">
+                                    Please enter valid name.Only characters allowed.
+                                </mat-error>
+                                <mat-error
+                                    *ngIf="userLastNamecomponent.touched && userLastNamecomponent.hasError('required')">
+                                    Last name is <strong>required</strong>
+                                </mat-error>
+                            </div>
+                            <div class="form-group mb-3 col-lg-12">
+                                <label for="Username" class="label">Email:</label>
+                                <input type="email" class="form-control" [placeholder]="userEmail" id="Username"
+                                    name="email" [(ngModel)]="userModel.email" #emailComponent="ngModel" id="email"
+                                    disabled="disable" />
+                            </div>
+                            <div class="form-group mb-3 col-lg-12">
+                                <label class="label" for="password-field">Password:</label>
+                                <input id="password-field" type="password" name="userPassword"
+                                    [(ngModel)]="userModel.userPassword" required #userPasswordComponent="ngModel"
+                                    class="form-control" placeholder="Password" />
+                            </div>
+                            <div class="form-group mb-3 col-lg-12">
+                                <label class="label" for="password-field2">Confirm Password:</label>
+                                <input id="password-field2" type="password" class="form-control"
+                                    name="confirmedPassword" placeholder="Confirm Password" [(ngModel)]="repassword"
+                                    #repasswordComponent="ngModel" />
+                            </div>
+                            <div class="form-group mb-3 col-lg-12">
+                                <label class="label" for="phoneNumber">Phone no.:</label>
+                                <input type="text" name="phoneNumber" class="form-control" placeholder="+251-9"
+                                    [(ngModel)]="userModel.phoneNumber" required #phoneNumbercomponent="ngModel"
+                                    pattern="^(\+\d{1,2}\s)?\(?\d{4}\)?[\s.-]?\d{2}[\s.-]?\d{2}[\s.-]?\d{2}$"
+                                    required="required" id="phoneNumber" />
+                                <mat-error
+                                    *ngIf="phoneNumbercomponent.touched && phoneNumbercomponent.invalid && !phoneNumbercomponent.hasError('required')">
+                                    Please enter valid phone number.10 digit Ex. 0911-70-17-77
+                                </mat-error>
+                                <mat-error
+                                    *ngIf="phoneNumbercomponent.touched && phoneNumbercomponent.hasError('required')">
+                                    Phone number is <strong>required</strong>
+                                </mat-error>
+                                <mat-hint style="align-items: flex-end;">Ex. 0911-70-17-77 </mat-hint>
+                            </div>
+                            <div class="form-group mb-3 col-lg-12">
+                                <label for="city" class="label">City:</label>
+                                <input type="text" class="form-control" placeholder="Address" id="city"
+                                    [(ngModel)]="userAddress.city" name="city" required #userCitycomponent="ngModel"
+                                    required="required" />
+                                <mat-error
+                                    *ngIf="userCitycomponent.touched && userCitycomponent.invalid && !userCitycomponent.hasError('required')">
+                                    Please enter valid city.Only characters allowed.
+                                </mat-error>
+                                <mat-error *ngIf="userCitycomponent.touched && userCitycomponent.hasError('required')">
+                                    City is <strong>required</strong>
+                                </mat-error>
+                            </div>
+                            <div class="form-group mb-3  col-lg-12">
+                                <label for="street" class="label">Street:</label>
+                                <input type="text" class="form-control" placeholder="street" id="street"
+                                    [(ngModel)]="userAddress.street" name="street" required #userStreetcomponent="ngModel"
+                                    required="required" />
+                                <mat-error
+                                    *ngIf="userStreetcomponent.touched && userStreetcomponent.invalid && !userStreetcomponent.hasError('required')">
+                                    Please enter valid Street .Only characters allowed.
+                                </mat-error>
+                                <mat-error
+                                    *ngIf="userStreetcomponent.touched && userStreetcomponent.hasError('required')">
+                                    Street is <strong>required</strong>
+                                </mat-error>
+                            </div>
+                            <div class="form-group col-lg-12">
+                                <button type="submit" id="btnSubmit" class="form-control btnSignup submit px-3"
+                                    [disabled]="!f.valid || repasswordComponent.value!=userPasswordComponent.value"
+                                    style="background: #4959C9; color: #fff;">Sign Up</button>
+                            </div>
+                            <div class="form-group ml-4">
+                                <div class="text-center">
+                                    <span class="text-muted">Already have an account?</span><a
+                                        [routerLink]="[ '/signin' ]" style="color: #3E88D7;"> SignIn</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

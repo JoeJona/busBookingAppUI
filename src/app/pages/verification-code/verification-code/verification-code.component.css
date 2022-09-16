@@ -1,0 +1,151 @@
+html,
+body {
+    /* background: #efefef; */
+    padding: 10px;
+    font-family: 'Varela Round';
+}
+
+/*=== 2. Anchor Link ===*/
+a {
+    color: #3E88D7;
+    transition: all ease-in-out 200ms;
+}
+
+a:hover {
+    color: #333333;
+    text-decoration: none;
+}
+
+/*=== 3. Text Outside the Box ===*/
+.fo-login-form {
+    color: #919191;
+    padding: 10px 20px;
+}
+
+.fo-login-form p {
+    margin-bottom: 5px;
+}
+
+/*=== 4. Main Form ===*/
+.forget-form {
+    max-width: 410px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.main-forget-form {
+    position: relative;
+}
+
+.forget-form .form-control {
+    border: 0;
+    box-shadow: 0 0 0;
+    border-radius: 0;
+    background: transparent;
+    color: #555555;
+    padding: 7px 0;
+    font-weight: bold;
+    height: auto;
+}
+
+.forget-form .form-control::-webkit-input-placeholder {
+    color: #999999;
+}
+
+.forget-form .form-control:-moz-placeholder,
+.forget-form .form-control::-moz-placeholder,
+.forget-form .form-control:-ms-input-placeholder {
+    color: #999999;
+}
+
+.forget-form .form-group {
+    margin-bottom: 0;
+    border-bottom: 2px solid #efefef;
+    padding-right: 20px;
+    position: relative;
+}
+
+.forget-form .form-group:last-child {
+    border-bottom: 0;
+}
+
+.forget-group {
+    background: #ffffff;
+    color: #999999;
+    /* border-radius: 0px 10px 10px 0px; */
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: 4px solid #eee
+}
+
+
+/*=== 5. Send Button ===*/
+.forget-form .send-button {
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    background: #4a4a4a;;
+    color: #999999;
+    padding: 11px 0;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    border: 5px solid #efefef;
+    border-radius: 50%;
+    transition: all ease-in-out 500ms;
+}
+
+.forget-form .send-button:hover {
+    color: #555555;
+    transform: rotate(360deg);
+}
+
+.forget-form .send-button.clicked.success {
+    color: #2ecc71;
+}
+
+.forget-form .send-button.clicked.error {
+    color: #e74c3c;
+}
+
+/*=== 7. Form - Main Message ===*/
+.forget-form-main-message {
+    background: #ffffff;
+    color: #999999;
+    border-left: 3px solid transparent;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    height: 0;
+    padding: 0 20px 0 17px;
+    opacity: 0;
+    transition: all ease-in-out 200ms;
+}
+
+.forget-form-main-message.show {
+    height: auto;
+    opacity: 1;
+    padding: 10px 20px 10px 17px;
+}
+
+.forget-form-main-message.success {
+    border-left-color: #2ecc71;
+}
+
+.forget-form-main-message.error {
+    border-left-color: #e74c3c;
+}
+
+.logo {
+    padding: 15px 0;
+    font-size: 25px;
+    color: #515050;
+    font-weight: bold;
+}
+
+.card{
+    margin-top:25px;
+    width:50%;
+    left: 25%;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}

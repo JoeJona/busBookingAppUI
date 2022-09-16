@@ -1,0 +1,102 @@
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                <div class="wrap d-md-flex">
+
+                    <div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center"
+                        style="background-image: url('./assets/img/bet1.PNG');border-radius: 5px;">
+                        <div class="text"
+                            style="background-color: #fff; width: 800px; height: 130px; padding-top: 15px;margin: -50px;opacity: 0.9;">
+                            <img src="assets/img/betdelala_logo.png" width="250" alt="logo" />
+                        </div>
+                    </div>
+                    
+                    <div class="login-wrap p-4 p-lg-5">
+                        <div id="error-msg-box"  class="alert alert-danger alert-dismissible fade show " role="alert"
+                        *ngIf="alertModel&&alertModel.isShow && alertModel.alertType=='Fail'">
+                        <h4 class="alert-heading">{{alertModel.alertMessege}}</h4>
+                        <p>{{alertModel.alertDetailMessege}}</p>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="alertModel.isShow=false">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <!-- <div class="row justify-content-center">
+                            <img src="assets/img/betdelala_logo.png" width="100" alt="Logo" />
+                        </div> -->
+                        <div class="d-flex">
+                            <div class="w-100">
+                                <h3 class="mb-4 text-center">Sign In</h3>
+                            </div>
+                        </div>
+                        <form #f="ngForm" (ngSubmit)="onSubmit(f)"  class="signin-form">
+                            <div class="form-group mb-3">
+                                <label for="Username" class="email">Email:</label>
+                                <input type="email" class="form-control" name="username" placeholder="Username"
+                                    id="Username" ngModel name="email" email required #emailInput="ngModel"
+                                    required="required" />
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="Password" class="password">Password:</label>
+                                <input type="password" class="form-control" placeholder="Password" ngModel
+                                    name="password" id="password" required #passwordInput="ngModel" />
+                            </div>
+
+                            <div class="form-group">
+                                <!-- .btnLogin {
+                                    background: #4959C9;
+                                    color: #fff;
+                                }
+                        
+                                .btnLogin:hover {
+                                    opacity: 0.8;
+                                } -->
+                                <button type="submit" id="btnSubmit" class="form-control btnLogin submit px-3"
+                                     [disabled]="!f.valid" style="background: #4959C9; color: #fff;">Sign In</button>
+                            </div>
+                            <div class="form-group ml-4">
+                                <div class="text-center">
+                                    <span class="text-muted">I don't have an account?</span><a [routerLink]="[ '/signup' ]" style="color: #3E88D7;"> SignUp</a>
+                                </div>
+                            </div>
+                            <div class="row px-3 mb-4">
+                                <div class="line"></div>
+                                <small class="or text-center">Or</small>
+                                <div class="line"></div>
+                            </div>
+                            <h4 class="mb-0 mr-4 mt-2 text-center">Sign in with</h4>
+                            <div class="col-lg-12">
+                                <div class="card2 card border-0 px-4 py-2">
+                                    <div class="row mb-4 px-3">
+                                        <div class="mx-auto d-block">
+                                            <img src="assets/img/facebook.png" width="40" alt="facebook" />
+                                        </div>
+                                        <div class="mx-auto d-block">
+                                            <img src="assets/img/twitter.png" width="40" alt="twitter" />
+                                        </div>
+                                        <div class="mx-auto d-block">
+                                            <img src="assets/img/google.png" width="40" alt="google" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group d-md-flex">
+                                <div class="w-50 text-left">
+                                    <label class="checkbox-wrap checkbox-primary mb-0 text-muted">Remember Me
+                                        <input type="checkbox" checked="checked" />
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="w-50 text-md-right">
+                                    <a [routerLink]="[ '/forget-password' ]">Forgot Password?</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
